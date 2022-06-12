@@ -185,9 +185,14 @@ B - IndianStatisticaI Institute
 C - Indian Standards Institute
 D - Indian Service Institute
 '''
+
+
+# lifiline list in difffernt rounds
 lifeline_easy=['AUDIENCE POLL','5050']
 lifeline_hard=['DOUBLE DIP','POWER PAPLU',]
 lifeline_intermediate=['CHANGE THE QUESTION']
+
+#defining the audience poll
 def ap(x):
     if x=='A':
         print('A - 60%')
@@ -210,6 +215,7 @@ def ap(x):
         print('C - 15%')
         print('D - 60%')
 
+# difing the 5050
 def fifty_fifty(z):
     if z=="A":
         print('CHOOSE FROM A AND D')
@@ -220,25 +226,47 @@ def fifty_fifty(z):
     if z=='D':
         print('CHOOSE FROM B AND D')
 
+
+# wallet represent the vitual money;
 wallet=0
+
+# number of questions
 score=0
+
+
 col=['A','B','C','D']
+
+# list of question in easy,hars and intermediate levels
 lqe=[q1,q2,q3,q4,q5,q6,q7,q8,q9,q10]
 lqh=[h1,h2,h3,h4,h5,h6,h7,h8,h9,h10]
 lqi=[i1,i2,i3,i4,i5,i6,i7,i8,i9,i10]
+
+
 #Level 1
-print('LEVEL 1 QUESTIONS...')
+print('\nLEVEL 1 QUESTIONS...\n')
 i=1
 while score!=7:
     print('QUESTION',i)
+    print()
     i=i+1
+    
+    # randomy choosing the question from the list
     q=random.choice(lqe)
+    
+    # disiplaying the question
     lqe.remove(q)
     print(q[1:])
+
+    # storing the correct answer
     correct_option=q[0]
+    
     a=input('TYPE YOUR CHOICE - ').upper()
-    if a=='LIFELINE':
-        if len(lifeline_easy)==0:
+    
+    
+    if a=='LIFELINE': #going for the life line
+        
+        # lifeline options
+        if len(lifeline_easy)==0: #no life left
             print('NO LIFELINE LEFT')
             a = input('TYPE YOUR CHOICE - ').upper()
         else:
@@ -252,9 +280,10 @@ while score!=7:
                 fifty_fifty(correct_option)
                 lifeline_easy.remove('5050')
                 a = input('TYPE YOUR CHOICE - ').upper()
+    
     if a in col:
         if a == correct_option:
-            print('CORRECT ANSWER')
+            print('CORRECT ANSWER\n\n')
             score = score + 1
             wallet=wallet+1000
         else:
@@ -264,19 +293,31 @@ while score!=7:
 
 
 #LEVEL 2
-print('LEVEL 2 QUESTIONS...')
+print('\nLEVEL 2 QUESTIONS...\n')
+
+# adding the left life;
 lifeline_intermediate=lifeline_intermediate+lifeline_easy
 score=0
 i=1
+
 while score!=7:
     print('QUESTION',i)
+    print()
     i=i+1
+    
+    # randomly choosing the question
     q=random.choice(lqi)
     lqi.remove(q)
+    
+    # displaying the question
     print(q[1:])
     correct_option=q[0]
+    
     a=input('TYPE YOUR CHOICE - ').upper()
+    
+    # opt for life line
     if a=='LIFELINE':
+        
         if len(lifeline_intermediate)==0:
             print('NO LIFELINE LEFT')
             a = input('TYPE YOUR CHOICE - ').upper()
@@ -303,32 +344,39 @@ while score!=7:
         if a == correct_option:
             score = score + 1
             wallet=wallet+10000
-            print('CORRECT ANSWER')
+            print('CORRECT ANSWER\n\n')
         else:
             print('WRONG ANSWER, CORRECT ANSWER IS', correct_option)
             print('YOU EARNED -',wallet,'RUPEES')
             quit()
 
 #LEVEL 3
-print('LEVEL 3 QUESTIONS...')
+print('\nLEVEL 3 QUESTIONS...\n')
+
 lifeline_hard = lifeline_intermediate + lifeline_hard
 score=0
 i = 1
+
 while score != 7:
     print('QUESTION', i)
+    print()
+    
     i = i + 1
     q = random.choice(lqh)
     lqh.remove(q)
     print(q[1:])
     correct_option = q[0]
+    
     a = input('TYPE YOUR CHOICE - ').upper()
     if a == 'LIFELINE':
+        
         if len(lifeline_hard) == 0:
             print('NO LIFELINE LEFT')
             a = input('TYPE YOUR CHOICE - ').upper()
         else:
             print(lifeline_hard)
             li = input('CHOOSE A LIFELINE - ').upper()
+            
             if li == 'AUDIENCE POLL':
                 ap(correct_option)
                 lifeline_hard.remove('AUDIENCE POLL')
@@ -344,6 +392,7 @@ while score != 7:
                 print(q[1:])
                 correct_option = q[0]
                 a = input('TYPE YOUR CHOICE - ').upper()
+            
             elif li=='POWER PALPU':
                 print(['AUDIENCE POLL','5050','CHANGE THE QUESTION'])
                 z=input('FROM THE ABOVE LIST WHICH LIFELINE YOU WANT TO REVIVE - ')
@@ -359,12 +408,13 @@ while score != 7:
                     print(q[1:])
                     correct_option = q[0]
                     a = input('TYPE YOUR CHOICE - ').upper()
+            
             elif li=='DOUBLE DIP':
                     w=input('ENTER YOUR FIRST CHOICE - ')
                     if w==correct_option:
                         score=score+1
                         wallet=wallet+100000
-                        print('CORRECT ANSWER')
+                        print('CORRECT ANSWER\n\n')
                         continue
                     else:
                         print('YOUR FIRST CHOICE IS WRONG')
@@ -375,7 +425,7 @@ while score != 7:
                             print('CORRECT ANSWER')
                             continue
                         else:
-                            print('YOUR SECOND CHOICE IS WRONG AND CORRECT ANSWER IS',correct_option)
+                            print('YOUR SECOND CHOICE IS ALSO WRONG AND CORRECT ANSWER IS',correct_option)
                             print('YOU EARNED -',wallet,'RUPEES')
                         quit()
     if a in col:
@@ -387,3 +437,7 @@ while score != 7:
             print('WRONG ANSWER, CORRECT ANSWER IS', correct_option)
             print('YOU EARNED -',wallet,'RUPEES')
             quit()
+
+
+print("/nYOU ANSWERED ALL THE QUESTION CORRECTLY")
+print('YOU EARNED -',wallet,'RUPEES')
