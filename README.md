@@ -5,8 +5,8 @@ This repository contains the code for KBC (Kaun Banega Crorepati) game. This gam
 The game is divided into 3 levels: easy, intermediate and hard. To go into higher level one need to answer 7 consecutive question correctly. With incresing level price money gets incresed by 10 times.
 Lifelines are also present like real KBC. Unused lifelines will be added in the next level life line.
 1. Easy: Audience poll (display the percentage of correctness of option), 5050 (2 incorrect option will removed)
-2. Intermediate: Double Dip (can choose two option) and Power Paplu (can use any previous 3 lifeline again)
-3. Hard: Change the Question (will change the question)
+2. Intermediate: Change the Question (will change the question)
+3. Hard: Double Dip (can choose two option) and Power Paplu (can use any previous 3 lifeline again)
 
 How to play?
 
