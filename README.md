@@ -1,18 +1,19 @@
-# KBC-game
+# Kaun Banega Crorepati Game (KBC)
 
-This repository contains the code for KBC (Kaun Banega Crorepati) game. This game is very similar to actual KBC. In this series of general knowledge questions will be displayed, one can answer them correctly to go on to the next question.
+Welcome to the thrilling world of Kaun Banega Crorepati (KBC)! This repository houses the code for an exciting game that closely mirrors the famous Indian television show, KBC. Prepare yourself for a series of challenging general knowledge questions, where your correct answers will propel you towards the ultimate goal of becoming a Crorepati!
 
-The game is divided into 3 levels: easy, intermediate and hard. To go into higher level one need to answer 7 consecutive question correctly. With incresing level price money gets incresed by 10 times.
-Lifelines are also present like real KBC. Unused lifelines will be added in the next level life line.
-1. Easy: Audience poll (display the percentage of correctness of option), 5050 (2 incorrect option will removed)
-2. Intermediate: Change the Question (will change the question)
-3. Hard: Double Dip (can choose two option) and Power Paplu (can use any previous 3 lifeline again)
+## Lifelines
+The KBC game unfolds in three levels: Easy, Intermediate, and Hard. To ascend to a higher level, you must answer seven consecutive questions correctly. As you progress, the prize money increases tenfold, making your journey even more rewarding. Just like the actual KBC, you'll have access to lifelines that can be your saviors:
+1. Easy Level: **Audience Poll** (reveals the percentage of correctness for each option) and **5050** (eliminates two incorrect options).
+2. Intermediate Level: **Change the Question** (gives you a new question to tackle).
+3. Hard Level: **Double Dip** (allows you to choose two options) and **Power Paplu** (lets you reuse any of the three lifelines from the previous levels).
 
-How to play?
+## How to Play
+Playing KBC is a breeze:
+1. A question will be displayed before you. Your task is to select one of the options from 'a' to 'd' (in any case).
+2. If your choice is correct, you'll swiftly move on to the next question, inching closer to your Crorepati dream.
+3. Need a lifeline? No worries! Type the lifeline keyword, and a list of available lifelines will appear. Simply type your desired lifeline to use it strategically.
 
-1. Question will displayed one needs to type one of the option from the a to d (any case).
-2. If the option is correct new question will be displayed else the game will the stop.
-3. Player can use the lifeline by typing the lifeline word. List of available lifelines will be displayed. Playes can type which lifeline they want.
+Get ready for an exhilarating KBC experience, and may your knowledge and intuition guide you to victory!
 
-
-HAPPY PLAYING!
+**Happy Playing!**
