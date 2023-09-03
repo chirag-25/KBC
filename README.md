@@ -16,4 +16,4 @@ Playing KBC is a breeze:
 
 Get ready for an exhilarating KBC experience, and may your knowledge and intuition guide you to victory!
 
-**Happy Playing!**
+**Happy Playing!!**
