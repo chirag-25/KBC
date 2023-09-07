@@ -1,3 +1,4 @@
+import random
 questions = [
     {
         "question": "What is the capital of France?",
